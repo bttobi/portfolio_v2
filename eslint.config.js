@@ -9,7 +9,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 export default tseslint.config(
   { ignores: ['dist'] },
   {
-    extends: [js.configs.recommended, jsxA11y.configs.strict, ...tseslint.configs.recommended],
+    extends: [js.configs.recommended, jsxA11y.flatConfigs.strict, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parserOptions: {

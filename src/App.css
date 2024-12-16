@@ -6,11 +6,9 @@
 html,
 body {
   background: #daf8ff;
+  color: "#071952";
   width: 100dvw;
   height: 100dvh;
   margin: 0px;
-  font-family: "Red Hat Display", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
 }
