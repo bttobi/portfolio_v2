@@ -29,7 +29,7 @@ const Navbar = () => {
           {sections.map((section) => (
             <Link key={section.text} className="flex flex-col items-center">
               <Icon type={section.icon} />
-              <span className="text-xs">{section.text}</span>
+              <span className="text-xs text-white">{section.text}</span>
             </Link>
           ))}
         </nav>

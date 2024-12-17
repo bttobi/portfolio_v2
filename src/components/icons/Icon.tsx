@@ -6,7 +6,7 @@ interface IconProps {
 }
 
 const Icon: React.FC<IconProps> = ({ type }) => {
-  return <span className="material-symbols-outlined">{type}</span>;
+  return <span className="material-symbols-outlined text-white">{type}</span>;
 };
 
 export default Icon;
