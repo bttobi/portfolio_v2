@@ -1,11 +1,15 @@
-import React from "react";
 import { Icon, IconType } from "../../icons";
 
 const socials = [
-  { text: "Email", icon: "", color: "#8C00A2", link: "" },
-  { text: "LinkedIn", icon: "", color: "#0072A9", link: "" },
-  { text: "Github", icon: "", color: "#000", link: "" },
-  { text: "Resume", icon: "", color: "#009886", link: "" },
+  { text: "Email", iconPath: "", color: "white", link: "" },
+  {
+    text: "LinkedIn",
+    iconPath: "./logos/linkedin.svg",
+    color: "#0072A9",
+    link: "",
+  },
+  { text: "Github", iconPath: "./logos/github.svg", color: "#FFF", link: "" },
+  { text: "Resume", iconPath: "", color: "#009886", link: "" },
 ];
 
 const Socials = () => {
@@ -27,10 +31,10 @@ const Socials = () => {
             <div
               style={{ backgroundColor: social.color }}
               className={
-                "flex justify-center items-center w-10 h-10 rounded-full"
+                "flex justify-center items-center w-10 h-10 rounded-full bg-white"
               }
             >
-              <Icon type={IconType.MENU} />
+              <img alt="logo" width="44px" src={social.iconPath} />
             </div>
             {social.text}
           </a>
