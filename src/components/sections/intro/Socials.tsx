@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import anime from "animejs";
+
 const socials = [
   {
     text: "Email",
@@ -33,17 +36,28 @@ const socials = [
 ];
 
 const Socials = () => {
+  useEffect(() => {
+    anime({
+      targets: ".social-button",
+      translateY: [100, 0],
+      delay: anime.stagger(100),
+      easing: "spring(0, 50, 100, 10)",
+      opacity: [0, 1],
+    });
+    anime({ targets: ".profile-pic", opacity: [0, 1], delay: 80 });
+  }, []);
+
   return (
     <div className="flex flex-col justify-center items-center">
       <img
-        className="rounded-full w-36 mt-10 mb-4 border-primary border-2"
+        className="profile-pic rounded-full w-36 mt-10 mb-4 border-primary border-2"
         src="./pictures/profile_picture.jpg"
         alt="Bartosz Tobiński's face"
       />
       <div className="flex gap-4">
         {socials.map((social) => (
           <button
-            className="flex flex-col justify-center items-center"
+            className="social-button flex flex-col justify-center items-center"
             key={social.text}
             onClick={social.action}
           >
